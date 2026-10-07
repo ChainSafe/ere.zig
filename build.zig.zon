@@ -1,0 +1,31 @@
+.{
+    .name = .ere_zig,
+    .version = "0.1.0",
+    .fingerprint = 0xfe3b3eac2d2c1750,
+    .minimum_zig_version = "0.16.0",
+    .description = "Zig package for ere's prebuilt EIP-8025 execution proof verifier (libere_verifier_c)",
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+    // Prebuilt `libere_verifier_c` from https://github.com/eth-act/ere/releases/tag/v0.19.1.
+    // Lazy: build.zig fetches only the archive that matches the build target.
+    .dependencies = .{
+        .darwin_arm64 = .{
+            .url = "https://github.com/eth-act/ere/releases/download/v0.19.1/libere_verifier_c.darwin-arm64.tar.gz",
+            .hash = "N-V-__8AANC1wAEKC4GF0S1gXko-NbClD2_3Y7f_p5VkdI0Q",
+            .lazy = true,
+        },
+        .linux_amd64 = .{
+            .url = "https://github.com/eth-act/ere/releases/download/v0.19.1/libere_verifier_c.linux-amd64.tar.gz",
+            .hash = "N-V-__8AAGxr_gNQdY6XDWsYQEe-w1hzHxWu1vy2eyjmgihX",
+            .lazy = true,
+        },
+        .linux_arm64 = .{
+            .url = "https://github.com/eth-act/ere/releases/download/v0.19.1/libere_verifier_c.linux-arm64.tar.gz",
+            .hash = "N-V-__8AAAQ5DAR4vfp4P8k39-0CjN3Z6KlS9pKBRD8anvLz",
+            .lazy = true,
+        },
+    },
+}
