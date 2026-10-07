@@ -42,7 +42,7 @@ pub fn build(b: *std.Build) void {
     const options = b.addOptions();
     options.addOption(bool, "available", package != null);
 
-    const module = b.addModule("ere_zig", .{
+    const module = b.addModule("ere", .{
         .root_source_file = b.path("src/root.zig"),
         .target = target,
         .optimize = optimize,
@@ -77,7 +77,7 @@ pub fn build(b: *std.Build) void {
             .root_source_file = b.path("src/test.zig"),
             .target = target,
             .optimize = optimize,
-            .imports = &.{.{ .name = "ere_zig", .module = module }},
+            .imports = &.{.{ .name = "ere", .module = module }},
         }),
     });
     if (t.os.tag == .linux and t.cpu.arch == .x86_64) {

@@ -1,6 +1,6 @@
 const std = @import("std");
 const testing = std.testing;
-const ere = @import("ere_zig");
+const ere = @import("ere");
 
 /// Populated by `zig build download-fixtures`: ere's own fixtures for each
 /// zkVM. Tests that need them skip when the files are absent.

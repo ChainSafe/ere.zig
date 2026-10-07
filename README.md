@@ -6,14 +6,14 @@ pinned ere release, translates `ere_verifier.h`, and exposes one module.
 
 ```zig
 // build.zig.zon
-.ere_zig = .{
+.ere = .{
     .url = "git+https://github.com/ChainSafe/ere.zig#<commit>",
     .hash = "...",
 },
 ```
 
 ```zig
-const ere = @import("ere_zig");
+const ere = @import("ere");
 
 if (!ere.available) return error.VerifierUnavailable;
 var handle: ?*ere.c.EreVerifier = null;
