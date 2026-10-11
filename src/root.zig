@@ -12,9 +12,6 @@
 
 const build_options = @import("build_options");
 
-/// ere release the archives come from.
-pub const ere_version = "v0.19.2";
-
 pub const available: bool = build_options.available;
 
 pub const c = if (available)
