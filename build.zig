@@ -5,9 +5,7 @@ const builtin = @import("builtin");
 /// aarch64 glibc Linux. Every other target gets the module with
 /// `available = false` and no `c`, so consumers gate on `available`.
 ///
-/// Linux links the archive statically. Rust's unwinder needs `-lunwind`, and
-/// Zig's self-hosted x86_64 ELF linker cannot read the archive, so consumers
-/// building x86_64 Debug binaries must set `use_llvm` and `use_lld`.
+/// Linux links the archive statically. Rust's unwinder needs `-lunwind`.
 ///
 /// macOS cannot link the archive statically: Zig's Mach-O linker rejects the
 /// debug stabs of the `ld -r` merged object and, once those are stripped,
@@ -80,10 +78,6 @@ pub fn build(b: *std.Build) void {
             .imports = &.{.{ .name = "ere", .module = module }},
         }),
     });
-    if (t.os.tag == .linux and t.cpu.arch == .x86_64) {
-        tests.use_llvm = true;
-        tests.use_lld = true;
-    }
     b.step("test", "Run the tests").dependOn(&b.addRunArtifact(tests).step);
 
     const download = b.addExecutable(.{

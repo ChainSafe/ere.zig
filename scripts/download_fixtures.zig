@@ -3,7 +3,7 @@
 
 const std = @import("std");
 
-const base_url = "https://raw.githubusercontent.com/eth-act/ere/332d8b1206a85b111b4051d2f8e7162ed3b3bb33";
+const base_url = "https://raw.githubusercontent.com/eth-act/ere/c0c411ae9215e0f72a00d52e32e267b30ef48606";
 const out_dir = "test/fixtures";
 const zkvms = [_][]const u8{ "openvm", "sp1", "zisk" };
 const files = [_][]const u8{ "program_vk.bin", "proof.bin", "public_values.bin" };
