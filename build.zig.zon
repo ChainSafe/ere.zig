@@ -9,22 +9,22 @@
         "build.zig.zon",
         "src",
     },
-    // Prebuilt `libere_verifier_c` from https://github.com/eth-act/ere/releases/tag/v0.19.2.
+    // Prebuilt `libere_verifier_c` from https://github.com/eth-act/ere/releases/tag/v0.19.6.
     // Lazy: build.zig fetches only the archive that matches the build target.
     .dependencies = .{
         .darwin_arm64 = .{
-            .url = "https://github.com/eth-act/ere/releases/download/v0.19.2/libere_verifier_c.darwin-arm64.tar.gz",
-            .hash = "N-V-__8AAOiywAGyHIy28a0OerPPgYkAlj9AVXFDazbPj48h",
+            .url = "https://github.com/eth-act/ere/releases/download/v0.19.6/libere_verifier_c.darwin-arm64.tar.gz",
+            .hash = "N-V-__8AACAJwQEww-Dq23n3NqLJdPuz98zxzZZ2JpHUtZSw",
             .lazy = true,
         },
         .linux_amd64 = .{
-            .url = "https://github.com/eth-act/ere/releases/download/v0.19.2/libere_verifier_c.linux-amd64.tar.gz",
-            .hash = "N-V-__8AALyyogGEx9yHDKtWtDDEchpVnk3WvTGI8cBpzvcV",
+            .url = "https://github.com/eth-act/ere/releases/download/v0.19.6/libere_verifier_c.linux-amd64.tar.gz",
+            .hash = "N-V-__8AANxo3gDMGGWaXFPi0GI_yjOqBnBcoMjDLcJukrg4",
             .lazy = true,
         },
         .linux_arm64 = .{
-            .url = "https://github.com/eth-act/ere/releases/download/v0.19.2/libere_verifier_c.linux-arm64.tar.gz",
-            .hash = "N-V-__8AAJz9pgGB8LiqL4LU6KTlGPjgpw9btJdMcHrLoyGd",
+            .url = "https://github.com/eth-act/ere/releases/download/v0.19.6/libere_verifier_c.linux-arm64.tar.gz",
+            .hash = "N-V-__8AAOzY2wAYgAeOJtBZi09euVof4vArHKuDhpclz2uz",
             .lazy = true,
         },
     },

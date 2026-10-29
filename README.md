@@ -46,7 +46,7 @@ zig build test
 
 | ere | SP1 | OpenVM | ZisK (proofman) |
 | --- | --- | --- | --- |
-| v0.19.2 | v6.6.0 | v2.1.0-preview | 1.3.1-alpha |
+| v0.19.6 | v6.9.0 | v2.1.0-preview | 1.3.2-alpha |
 
 Proofs verify only with a library of the same SDK versions and a verifying key of the same guest
 build ([ere-guests](https://github.com/eth-act/ere-guests) releases ship the `.vk` files).
